@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+*.log
+promo-output/
+output/
+raw/
+data.json
+ranked_promos.csv
+run_log.json
+rejections.json
+*.mp4
+*.mov
+episode-*.txt
+!examples/synthetic_episode.txt
+.DS_Store
+
+# Only fictional data is published with the static demo.
+!docs/data.json

@@ -1,0 +1,89 @@
+EPISODE NUMBER: Episode 2
+EPISODE LOGLINE: Fictional station suspense. Synthetic test material only.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. STATION CONTROL ROOM - NIGHT
+Scene start: 00:00.00
+Scene end: 00:37.20
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.00)
+At a different station, courier Niko follows a security officer into a baggage room.
+
+**ACTION:**
+Start: (00:03.00) | End: (00:05.40)
+The officer slams a steel door and points a pistol at Niko.
+
+**SECURITY OFFICER:**
+Start: (00:03.20) | End: (00:06.30)
+"Put the case down. Slowly."
+
+**CAMERA:**
+Start: (00:05.40) | End: (00:08.10)
+Niko lifts a small silver delivery case, his hands shaking.
+
+**NIKO:**
+Start: (00:06.60) | End: (00:10.10)
+"I was paid to deliver it. I do not know what is inside."
+
+**ACTION:**
+Start: (00:10.10) | End: (00:12.80)
+The officer removes his own security badge and drops it on the floor.
+
+**SECURITY OFFICER:**
+Start: (00:11.00) | End: (00:14.20)
+"Neither does station security."
+
+**CAMERA:**
+Start: (00:12.80) | End: (00:17.60)
+A red digital display lights up on the case. It begins counting down from thirty seconds.
+
+**NIKO:**
+Start: (00:14.70) | End: (00:17.40)
+"Why is there a timer?"
+
+**ACTION:**
+Start: (00:17.60) | End: (00:21.60)
+Niko tries the door handle. It will not move. The officer pockets the key.
+
+**SECURITY OFFICER:**
+Start: (00:18.10) | End: (00:21.20)
+"You were never supposed to leave this room."
+
+**SOUND FX:**
+Start: (00:21.60) | End: (00:24.30)
+A train announcement outside the locked room: all passengers please board.
+
+**CAMERA:**
+Start: (00:21.60) | End: (00:26.80)
+Niko stares at the timer, then at a window overlooking a platform full of boarding passengers.
+
+**NIKO:**
+Start: (00:24.60) | End: (00:28.10)
+"Those people. What did you make me carry?"
+
+**SECURITY OFFICER:**
+Start: (00:28.70) | End: (00:32.60)
+"The bomb. And your fingerprints are on it."
+
+**ACTION:**
+Start: (00:32.60) | End: (00:34.50)
+The officer places a detonator on the table beside the case.
+
+**NIKO:**
+Start: (00:33.50) | End: (00:36.20)
+"If you touch that button, everyone on that platform—"
+
+**CAMERA:**
+Start: (00:34.50) | End: (00:37.20)
+Niko takes a desperate step toward the officer.
+
+**SOUND FX:**
+Start: (00:36.20) | End: (00:37.20)
+The locked-room countdown continues.
+
+--- SCRIPT END ---

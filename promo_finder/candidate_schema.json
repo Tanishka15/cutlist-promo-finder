@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "start_event_id": {"type": "string"},
+          "end_event_id": {"type": "string"},
+          "hook_event_id": {"type": "string"},
+          "cliffhanger_event_id": {"type": "string"},
+          "hook": {"type": "string"},
+          "cliffhanger": {"type": "string"},
+          "why_it_works": {"type": "string"},
+          "hook_score": {"type": "number", "minimum": 0, "maximum": 5},
+          "cliffhanger_score": {"type": "number", "minimum": 0, "maximum": 5},
+          "clarity_score": {"type": "number", "minimum": 0, "maximum": 5}
+        },
+        "required": [
+          "start_event_id", "end_event_id", "hook_event_id", "cliffhanger_event_id",
+          "hook", "cliffhanger", "why_it_works", "hook_score", "cliffhanger_score", "clarity_score"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["candidates"],
+  "additionalProperties": false
+}

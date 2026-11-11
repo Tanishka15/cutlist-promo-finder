@@ -1,0 +1,592 @@
+{
+  "meta": {
+    "mode": "synthetic",
+    "episodes": 2,
+    "scenes": 2,
+    "entries": 46,
+    "model": "Illustrative demo \u2014 no model call",
+    "run_status": "Synthetic example only"
+  },
+  "episodes": [
+    {
+      "number": 1,
+      "source_name": "synthetic_station_1.txt",
+      "events": [
+        {
+          "id": "E001-0001",
+          "type": "CAMERA",
+          "start": "00:00.00",
+          "end": "00:03.20",
+          "start_cs": 0,
+          "end_cs": 320,
+          "original_text": "An empty station platform after dark. The departure board reads: LAST EXPRESS \u2014 21:10.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0002",
+          "type": "ACTION",
+          "start": "00:03.20",
+          "end": "00:06.20",
+          "start_cs": 320,
+          "end_cs": 620,
+          "original_text": "Mara runs toward the control desk, still wearing a hospital visitor badge.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0003",
+          "type": "CAMERA",
+          "start": "00:03.20",
+          "end": "00:06.20",
+          "start_cs": 320,
+          "end_cs": 620,
+          "original_text": "A station clerk looks up as Mara reaches for the red emergency lever.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0004",
+          "type": "ACTION",
+          "start": "00:06.20",
+          "end": "00:08.10",
+          "start_cs": 620,
+          "end_cs": 810,
+          "original_text": "Mara pulls the emergency stop. The departing train jolts to a halt.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0005",
+          "type": "SOUND",
+          "start": "00:06.20",
+          "end": "00:08.80",
+          "start_cs": 620,
+          "end_cs": 880,
+          "original_text": "The platform alarm sounds over screeching brakes.",
+          "label": "SOUND FX",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0006",
+          "type": "DIALOGUE",
+          "start": "00:06.60",
+          "end": "00:10.20",
+          "start_cs": 660,
+          "end_cs": 1020,
+          "original_text": "\"You cannot stop the last express!\"",
+          "label": "STATION CLERK",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0007",
+          "type": "CAMERA",
+          "start": "00:08.10",
+          "end": "00:12.80",
+          "start_cs": 810,
+          "end_cs": 1280,
+          "original_text": "Mara pushes a phone toward the clerk. A picture shows a frightened child behind a locked train door.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0008",
+          "type": "DIALOGUE",
+          "start": "00:10.40",
+          "end": "00:14.40",
+          "start_cs": 1040,
+          "end_cs": 1440,
+          "original_text": "\"My daughter is on that train. Someone has locked her inside.\"",
+          "label": "MARA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0009",
+          "type": "CAMERA",
+          "start": "00:12.80",
+          "end": "00:17.80",
+          "start_cs": 1280,
+          "end_cs": 1780,
+          "original_text": "The clerk zooms into the picture. A carriage number, SIX, is visible beside the child.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0010",
+          "type": "DIALOGUE",
+          "start": "00:14.80",
+          "end": "00:17.50",
+          "start_cs": 1480,
+          "end_cs": 1750,
+          "original_text": "\"Carriage six. I can call the driver.\"",
+          "label": "STATION CLERK",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0011",
+          "type": "ACTION",
+          "start": "00:17.80",
+          "end": "00:20.70",
+          "start_cs": 1780,
+          "end_cs": 2070,
+          "original_text": "Mara stops his hand before he can lift the radio.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0012",
+          "type": "DIALOGUE",
+          "start": "00:18.10",
+          "end": "00:20.60",
+          "start_cs": 1810,
+          "end_cs": 2060,
+          "original_text": "\"Read the message first.\"",
+          "label": "MARA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0013",
+          "type": "CAMERA",
+          "start": "00:20.70",
+          "end": "00:24.80",
+          "start_cs": 2070,
+          "end_cs": 2480,
+          "original_text": "On the phone: IF YOU CALL THE DRIVER, THE CHILD DIES.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0014",
+          "type": "SOUND",
+          "start": "00:22.30",
+          "end": "00:24.80",
+          "start_cs": 2230,
+          "end_cs": 2480,
+          "original_text": "The station telephone begins to ring.",
+          "label": "SOUND FX",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0015",
+          "type": "ACTION",
+          "start": "00:24.80",
+          "end": "00:27.30",
+          "start_cs": 2480,
+          "end_cs": 2730,
+          "original_text": "The clerk takes the phone. Mara shakes her head, pleading silently.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0016",
+          "type": "DIALOGUE",
+          "start": "00:25.10",
+          "end": "00:27.20",
+          "start_cs": 2510,
+          "end_cs": 2720,
+          "original_text": "\"Who is this?\"",
+          "label": "STATION CLERK",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0017",
+          "type": "DIALOGUE",
+          "start": "00:27.60",
+          "end": "00:31.80",
+          "start_cs": 2760,
+          "end_cs": 3180,
+          "original_text": "\"You have twenty seconds to let the train leave.\"",
+          "label": "VOICE ON TELEPHONE",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0018",
+          "type": "CAMERA",
+          "start": "00:29.30",
+          "end": "00:33.80",
+          "start_cs": 2930,
+          "end_cs": 3380,
+          "original_text": "A control-screen countdown falls from twenty to nineteen. A red marker identifies carriage six.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0019",
+          "type": "DIALOGUE",
+          "start": "00:32.10",
+          "end": "00:35.80",
+          "start_cs": 3210,
+          "end_cs": 3580,
+          "original_text": "\"There is a child on board. Open the carriage.\"",
+          "label": "STATION CLERK",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0020",
+          "type": "ACTION",
+          "start": "00:35.80",
+          "end": "00:39.30",
+          "start_cs": 3580,
+          "end_cs": 3930,
+          "original_text": "The clerk puts the call on speaker so Mara can hear. She grips the desk.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0021",
+          "type": "DIALOGUE",
+          "start": "00:36.20",
+          "end": "00:39.20",
+          "start_cs": 3620,
+          "end_cs": 3920,
+          "original_text": "\"Please. Let me speak to my daughter.\"",
+          "label": "MARA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0022",
+          "type": "CAMERA",
+          "start": "00:39.30",
+          "end": "00:43.10",
+          "start_cs": 3930,
+          "end_cs": 4310,
+          "original_text": "The clerk watches Mara as the voice on the telephone changes to a frightened whisper.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0023",
+          "type": "SOUND",
+          "start": "00:42.40",
+          "end": "00:43.20",
+          "start_cs": 4240,
+          "end_cs": 4320,
+          "original_text": "A sharp breath over the telephone line.",
+          "label": "SOUND FX",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0024",
+          "type": "DIALOGUE",
+          "start": "00:43.30",
+          "end": "00:46.80",
+          "start_cs": 4330,
+          "end_cs": 4680,
+          "original_text": "\"That woman beside you is not her mother.\"",
+          "label": "VOICE ON TELEPHONE",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0025",
+          "type": "CAMERA",
+          "start": "00:43.30",
+          "end": "00:47.90",
+          "start_cs": 4330,
+          "end_cs": 4790,
+          "original_text": "The clerk slowly turns toward Mara, who is still holding the child's photograph.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0026",
+          "type": "ACTION",
+          "start": "00:47.90",
+          "end": "00:50.40",
+          "start_cs": 4790,
+          "end_cs": 5040,
+          "original_text": "Mara reaches into her coat. The clerk backs away from the desk.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E001-0027",
+          "type": "SOUND",
+          "start": "00:47.90",
+          "end": "00:50.40",
+          "start_cs": 4790,
+          "end_cs": 5040,
+          "original_text": "The countdown keeps ticking.",
+          "label": "SOUND FX",
+          "scene_id": "01"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "source_name": "synthetic_station_2.txt",
+      "events": [
+        {
+          "id": "E002-0001",
+          "type": "CAMERA",
+          "start": "00:00.00",
+          "end": "00:03.00",
+          "start_cs": 0,
+          "end_cs": 300,
+          "original_text": "At a different station, courier Niko follows a security officer into a baggage room.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0002",
+          "type": "ACTION",
+          "start": "00:03.00",
+          "end": "00:05.40",
+          "start_cs": 300,
+          "end_cs": 540,
+          "original_text": "The officer slams a steel door and points a pistol at Niko.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0003",
+          "type": "DIALOGUE",
+          "start": "00:03.20",
+          "end": "00:06.30",
+          "start_cs": 320,
+          "end_cs": 630,
+          "original_text": "\"Put the case down. Slowly.\"",
+          "label": "SECURITY OFFICER",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0004",
+          "type": "CAMERA",
+          "start": "00:05.40",
+          "end": "00:08.10",
+          "start_cs": 540,
+          "end_cs": 810,
+          "original_text": "Niko lifts a small silver delivery case, his hands shaking.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0005",
+          "type": "DIALOGUE",
+          "start": "00:06.60",
+          "end": "00:10.10",
+          "start_cs": 660,
+          "end_cs": 1010,
+          "original_text": "\"I was paid to deliver it. I do not know what is inside.\"",
+          "label": "NIKO",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0006",
+          "type": "ACTION",
+          "start": "00:10.10",
+          "end": "00:12.80",
+          "start_cs": 1010,
+          "end_cs": 1280,
+          "original_text": "The officer removes his own security badge and drops it on the floor.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0007",
+          "type": "DIALOGUE",
+          "start": "00:11.00",
+          "end": "00:14.20",
+          "start_cs": 1100,
+          "end_cs": 1420,
+          "original_text": "\"Neither does station security.\"",
+          "label": "SECURITY OFFICER",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0008",
+          "type": "CAMERA",
+          "start": "00:12.80",
+          "end": "00:17.60",
+          "start_cs": 1280,
+          "end_cs": 1760,
+          "original_text": "A red digital display lights up on the case. It begins counting down from thirty seconds.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0009",
+          "type": "DIALOGUE",
+          "start": "00:14.70",
+          "end": "00:17.40",
+          "start_cs": 1470,
+          "end_cs": 1740,
+          "original_text": "\"Why is there a timer?\"",
+          "label": "NIKO",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0010",
+          "type": "ACTION",
+          "start": "00:17.60",
+          "end": "00:21.60",
+          "start_cs": 1760,
+          "end_cs": 2160,
+          "original_text": "Niko tries the door handle. It will not move. The officer pockets the key.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0011",
+          "type": "DIALOGUE",
+          "start": "00:18.10",
+          "end": "00:21.20",
+          "start_cs": 1810,
+          "end_cs": 2120,
+          "original_text": "\"You were never supposed to leave this room.\"",
+          "label": "SECURITY OFFICER",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0012",
+          "type": "SOUND",
+          "start": "00:21.60",
+          "end": "00:24.30",
+          "start_cs": 2160,
+          "end_cs": 2430,
+          "original_text": "A train announcement outside the locked room: all passengers please board.",
+          "label": "SOUND FX",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0013",
+          "type": "CAMERA",
+          "start": "00:21.60",
+          "end": "00:26.80",
+          "start_cs": 2160,
+          "end_cs": 2680,
+          "original_text": "Niko stares at the timer, then at a window overlooking a platform full of boarding passengers.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0014",
+          "type": "DIALOGUE",
+          "start": "00:24.60",
+          "end": "00:28.10",
+          "start_cs": 2460,
+          "end_cs": 2810,
+          "original_text": "\"Those people. What did you make me carry?\"",
+          "label": "NIKO",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0015",
+          "type": "DIALOGUE",
+          "start": "00:28.70",
+          "end": "00:32.60",
+          "start_cs": 2870,
+          "end_cs": 3260,
+          "original_text": "\"The bomb. And your fingerprints are on it.\"",
+          "label": "SECURITY OFFICER",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0016",
+          "type": "ACTION",
+          "start": "00:32.60",
+          "end": "00:34.50",
+          "start_cs": 3260,
+          "end_cs": 3450,
+          "original_text": "The officer places a detonator on the table beside the case.",
+          "label": "ACTION",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0017",
+          "type": "DIALOGUE",
+          "start": "00:33.50",
+          "end": "00:36.20",
+          "start_cs": 3350,
+          "end_cs": 3620,
+          "original_text": "\"If you touch that button, everyone on that platform\u2014\"",
+          "label": "NIKO",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0018",
+          "type": "CAMERA",
+          "start": "00:34.50",
+          "end": "00:37.20",
+          "start_cs": 3450,
+          "end_cs": 3720,
+          "original_text": "Niko takes a desperate step toward the officer.",
+          "label": "CAMERA",
+          "scene_id": "01"
+        },
+        {
+          "id": "E002-0019",
+          "type": "SOUND",
+          "start": "00:36.20",
+          "end": "00:37.20",
+          "start_cs": 3620,
+          "end_cs": 3720,
+          "original_text": "The locked-room countdown continues.",
+          "label": "SOUND FX",
+          "scene_id": "01"
+        }
+      ]
+    }
+  ],
+  "promos": [
+    {
+      "candidate_id": "synthetic-1-1",
+      "episode": 1,
+      "rank": 1,
+      "start": "00:06.20",
+      "end": "00:46.80",
+      "start_cs": 620,
+      "end_cs": 4680,
+      "duration": 40.6,
+      "hook": "She stops the train. Then the caller questions who she is.",
+      "cliffhanger": "The caller says the woman begging to save the child is not her mother. The clerk has not acted on this warning.",
+      "why_it_works": "A violent emergency stop grabs attention immediately. A child in a locked carriage and a visible countdown establish the stakes within the cut. The final warning changes how we read the desperate woman without answering whom the clerk should trust.",
+      "hook_score": 5,
+      "cliffhanger_score": 5,
+      "clarity_score": 4,
+      "score": 4.75,
+      "review_flags": [],
+      "start_event_id": "E001-0004",
+      "end_event_id": "E001-0024",
+      "hook_event_id": "E001-0004",
+      "cliffhanger_event_id": "E001-0024"
+    },
+    {
+      "candidate_id": "synthetic-2-1",
+      "episode": 2,
+      "rank": 2,
+      "start": "00:03.00",
+      "end": "00:34.50",
+      "start_cs": 300,
+      "end_cs": 3450,
+      "duration": 31.5,
+      "hook": "A courier at gunpoint discovers what he just delivered.",
+      "cliffhanger": "The courier learns the case is a bomb, he has been framed, and the officer sets a detonator beside it. Will he stop the officer?",
+      "why_it_works": "The gun and locked door establish danger immediately. A countdown and passengers outside make the stakes visible. The bomb reveal is unresolved, but the proposed out point cuts through Niko's next spoken line; an editor should move it or drop this version.",
+      "hook_score": 5,
+      "cliffhanger_score": 4,
+      "clarity_score": 5,
+      "score": 4.65,
+      "review_flags": [
+        "End 00:34.50 falls inside spoken dialogue E002-0017 (00:33.50\u201300:36.20). Review the out point."
+      ],
+      "start_event_id": "E002-0002",
+      "end_event_id": "E002-0016",
+      "hook_event_id": "E002-0002",
+      "cliffhanger_event_id": "E002-0015"
+    }
+  ],
+  "log": [
+    {
+      "episode": 1,
+      "status": "synthetic_example",
+      "validated_count": 1,
+      "message": "Invented screenplay; illustrative selection, no inference."
+    },
+    {
+      "episode": 2,
+      "status": "synthetic_example",
+      "validated_count": 1,
+      "message": "Invented boundary-review example; no inference."
+    }
+  ]
+}

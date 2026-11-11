@@ -1,0 +1,121 @@
+EPISODE NUMBER: Episode 1
+EPISODE LOGLINE: Fictional station suspense. Synthetic test material only.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. STATION CONTROL ROOM - NIGHT
+Scene start: 00:00.00
+Scene end: 00:50.40
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.20)
+An empty station platform after dark. The departure board reads: LAST EXPRESS — 21:10.
+
+**ACTION:**
+Start: (00:03.20) | End: (00:06.20)
+Mara runs toward the control desk, still wearing a hospital visitor badge.
+
+**CAMERA:**
+Start: (00:03.20) | End: (00:06.20)
+A station clerk looks up as Mara reaches for the red emergency lever.
+
+**ACTION:**
+Start: (00:06.20) | End: (00:08.10)
+Mara pulls the emergency stop. The departing train jolts to a halt.
+
+**SOUND FX:**
+Start: (00:06.20) | End: (00:08.80)
+The platform alarm sounds over screeching brakes.
+
+**STATION CLERK:**
+Start: (00:06.60) | End: (00:10.20)
+"You cannot stop the last express!"
+
+**CAMERA:**
+Start: (00:08.10) | End: (00:12.80)
+Mara pushes a phone toward the clerk. A picture shows a frightened child behind a locked train door.
+
+**MARA:**
+Start: (00:10.40) | End: (00:14.40)
+"My daughter is on that train. Someone has locked her inside."
+
+**CAMERA:**
+Start: (00:12.80) | End: (00:17.80)
+The clerk zooms into the picture. A carriage number, SIX, is visible beside the child.
+
+**STATION CLERK:**
+Start: (00:14.80) | End: (00:17.50)
+"Carriage six. I can call the driver."
+
+**ACTION:**
+Start: (00:17.80) | End: (00:20.70)
+Mara stops his hand before he can lift the radio.
+
+**MARA:**
+Start: (00:18.10) | End: (00:20.60)
+"Read the message first."
+
+**CAMERA:**
+Start: (00:20.70) | End: (00:24.80)
+On the phone: IF YOU CALL THE DRIVER, THE CHILD DIES.
+
+**SOUND FX:**
+Start: (00:22.30) | End: (00:24.80)
+The station telephone begins to ring.
+
+**ACTION:**
+Start: (00:24.80) | End: (00:27.30)
+The clerk takes the phone. Mara shakes her head, pleading silently.
+
+**STATION CLERK:**
+Start: (00:25.10) | End: (00:27.20)
+"Who is this?"
+
+**VOICE ON TELEPHONE:**
+Start: (00:27.60) | End: (00:31.80)
+"You have twenty seconds to let the train leave."
+
+**CAMERA:**
+Start: (00:29.30) | End: (00:33.80)
+A control-screen countdown falls from twenty to nineteen. A red marker identifies carriage six.
+
+**STATION CLERK:**
+Start: (00:32.10) | End: (00:35.80)
+"There is a child on board. Open the carriage."
+
+**ACTION:**
+Start: (00:35.80) | End: (00:39.30)
+The clerk puts the call on speaker so Mara can hear. She grips the desk.
+
+**MARA:**
+Start: (00:36.20) | End: (00:39.20)
+"Please. Let me speak to my daughter."
+
+**CAMERA:**
+Start: (00:39.30) | End: (00:43.10)
+The clerk watches Mara as the voice on the telephone changes to a frightened whisper.
+
+**SOUND FX:**
+Start: (00:42.40) | End: (00:43.20)
+A sharp breath over the telephone line.
+
+**VOICE ON TELEPHONE:**
+Start: (00:43.30) | End: (00:46.80)
+"That woman beside you is not her mother."
+
+**CAMERA:**
+Start: (00:43.30) | End: (00:47.90)
+The clerk slowly turns toward Mara, who is still holding the child's photograph.
+
+**ACTION:**
+Start: (00:47.90) | End: (00:50.40)
+Mara reaches into her coat. The clerk backs away from the desk.
+
+**SOUND FX:**
+Start: (00:47.90) | End: (00:50.40)
+The countdown keeps ticking.
+
+--- SCRIPT END ---

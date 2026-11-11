@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#131613">
+  <meta name="description" content="An evidence-led editor workspace for finding short, continuous screenplay promos.">
+  <title>CUTLIST — Find the promos</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#detail">Skip to selected promo</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="CUTLIST home"><span class="brand-icon" aria-hidden="true">╱╱</span>CUTLIST<span class="brand-sub">FIND THE PROMOS</span></a>
+    <div class="top-actions"><a class="source-download" href="./cutlist-prototype.zip" download>↓ Python prototype</a><span id="mode" class="pill">LOADING</span><button id="export-ranked" class="button secondary" disabled>↓ Export shortlist</button></div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">THE EDITOR’S WORKSPACE</p><h1 id="page-title">Good stories. <span>Great cuts.</span></h1><p class="subline">Find the hook. Know the stakes. Leave a question.</p></div>
+      <div class="summary" aria-label="Run summary"><div><strong id="promo-count">—</strong><span>ranked promos</span></div><div><strong id="episode-count">—</strong><span>episodes read</span></div><div><strong>20–60<span class="seconds">s</span></strong><span>one continuous cut</span></div></div>
+    </section>
+    <div id="notice" class="notice" role="status">Loading the screenplay workspace…</div>
+    <details class="coverage"><summary id="coverage-summary">Run coverage</summary><div id="coverage-detail"></div></details>
+    <details class="quickstart"><summary>Run it on your own screenplay <span>↗</span></summary><div><p>Download the Python prototype and open <strong>README.md</strong> for setup and run instructions. The CLI accepts a new timestamped screenplay or a folder of episodes. It parses exact timecodes, asks your configured model for cuts, validates them, and exports this workspace.</p><p>This browser view reads existing results; it does not make model calls. Footage you attach stays in this browser.</p><a class="button secondary small" href="./cutlist-prototype.zip" download>↓ Download Python source + synthetic example</a></div></details>
+    <div class="workspace">
+      <aside class="shortlist" aria-labelledby="shortlist-title">
+        <div class="section-head"><h2 id="shortlist-title">The shortlist</h2><span id="list-count" class="count">0</span></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search hooks, stakes, episodes…" aria-label="Search promos"></label>
+        <div class="filters"><label><span class="sr-only">Filter by episode</span><select id="episode-filter"><option value="">All episodes</option></select></label><label><span class="sr-only">Filter by review decision</span><select id="review-filter"><option value="">All decisions</option><option value="unreviewed">Unreviewed</option><option value="post">Post</option><option value="adjust">Adjust</option><option value="drop">Drop</option></select></label></div>
+        <p class="ranking-note">Sorted by editorial score · 40 / 35 / 25</p>
+        <div id="promo-list" class="promo-list" aria-live="polite"></div>
+        <div class="aside-footer"><span class="dot" aria-hidden="true"></span> AI suggests. You make the cut.</div>
+      </aside>
+      <section id="detail" class="detail" aria-label="Selected promo" tabindex="-1"><div class="empty">Your shortlist is loading.</div></section>
+    </div>
+    <footer class="footer"><span>CUTLIST <span class="muted">/</span> SCREENPLAY → SHORTLIST</span><span>Timing checked in code. Story judged by an editor.</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

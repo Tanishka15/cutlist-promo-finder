@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cutlist-promo-finder"
+version = "1.0.0"
+description = "Auditable, timestamp-exact continuous promo selection from screenplays"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+cutlist = "promo_finder.__main__:main"
+
+[tool.setuptools]
+packages = ["promo_finder"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+promo_finder = ["candidate_schema.json", "web/*"]
