@@ -5,6 +5,8 @@ __pycache__/
 *.log
 promo-output/
 output/
+results/
+audit-check/
 raw/
 data.json
 ranked_promos.csv

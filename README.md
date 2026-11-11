@@ -1,48 +1,108 @@
 # CUTLIST · Find the promos
 
-[Open the live demo](https://tanishka15.github.io/cutlist-promo-finder/)
+**CUTLIST finds short promo clips (20–60 seconds) inside a screenplay.**
+An AI suggests the clips, Python checks the timing and ranks them, and a person makes the final call in a simple browser editor.
 
-Select auditable 20–60 second, continuous promos from timestamped screenplays.
-Python handles exact timing and eligibility; a model proposes and scores cuts;
-an editor makes the posting decision. No dependency installation is needed.
+👉 **[Try the live demo](https://tanishka15.github.io/cutlist-promo-finder/)**. No install is needed. The demo uses an invented sample story and saved results, so it does not call an AI.
 
-## Quick start
+---
 
-Requires Python 3.10+. Run these commands **from this extracted project folder**.
+## What is it for?
 
-```sh
-# Explore a fictional example without a key or model call.
-python3 -m promo_finder serve --out promo_finder/web --port 8765
-# Open http://127.0.0.1:8765 and choose a clip.
+Short-video teams need teaser clips that make people want to watch the next episode. Finding them by hand means reading a whole script. CUTLIST gives an editor a ranked shortlist instead.
 
-# Parse any screenplay using the documented text format.
-python3 -m promo_finder audit examples/synthetic_episode.txt --out /tmp/cutlist-audit
+A good promo has three things. CUTLIST scores each one:
 
-# Use an authenticated Codex CLI; defaults to its built-in model.
-python3 -m promo_finder run /path/to/screenplays --out /path/to/private-results --provider codex
+| What it checks | The question | Weight |
+| --- | --- | --- |
+| **Hook** | Does something grab attention in the first 3 seconds? | 40% |
+| **Cliffhanger** | Does it stop before an important question is answered? | 35% |
+| **Clarity** | Can a new viewer follow the conflict? | 25% |
 
-# Or use the OpenAI Responses API; choose a model available to your account.
-export OPENAI_API_KEY='your-key'
-python3 -m promo_finder run /path/to/new-screenplay.txt --out /path/to/private-results --provider openai --model YOUR_MODEL
+## How it works
 
-# Inspect the actual run in the local editor.
-python3 -m promo_finder serve --out /path/to/private-results --port 8765
+```
+ Screenplay (.txt)  →  AI suggests up to 3 cuts  →  Python checks & ranks  →  You keep or drop each one
 ```
 
-The editor assets are included in the Python package, including wheel installations.
-The source ZIP download on the hosted demo is optional locally: the extracted
-project already contains the Python source and this README.
+- **The AI** picks start and end points and explains why.
+- **Python** rejects anything with wrong timing (not 20–60 s, a hook too late, an ending cut off) and ranks the rest.
+- **You** read each clip in the editor and decide. The editor works from text: "Play script" scrolls the lines against a clock. You can also attach a video file if you have one.
 
-The hosted demo contains fictional, pre-authored sample results. It makes no live
-model calls. Download this source to process a new screenplay locally. Model calls
-use your existing provider account. Footage is optional: attach a local episode
-video in the editor to seek to exact cut boundaries; files stay in your browser.
+---
 
-## Input format
+## Option 1: Try the demo in your browser (1 minute)
 
-Episode numbers come from file content, never filenames. Headings are matched
-case-insensitively. Each block must have a label, explicit start/end timecodes,
-and original text. Minutes can exceed 59; seconds must be 00–59. Example:
+1. Open the **[live demo](https://tanishka15.github.io/cutlist-promo-finder/)**.
+2. Click the first clip card (**#01**) on the left.
+3. Press **Play script** to watch the timed text play.
+4. Click **Opening evidence** and **Ending evidence** to see why the clip was picked.
+5. Under **Your editorial call**, choose **Post** or **Drop** and write a reason.
+6. Click **Export reviews** to download your decisions as a CSV.
+
+## Option 2: Run it on your own computer
+
+**You need:** Python 3.10 or newer. Nothing else needs installing.
+
+**Step 1: Get the code**
+
+```sh
+git clone https://github.com/Tanishka15/cutlist-promo-finder.git
+cd cutlist-promo-finder
+```
+
+**Step 2: Open the editor with the sample results (no AI needed)**
+
+```sh
+python3 -m promo_finder serve --out promo_finder/web --port 8765
+```
+
+Open **http://127.0.0.1:8765** in your browser. Press `Control+C` in the terminal to stop.
+
+**Step 3: Find promos in a screenplay with AI**
+
+Choose **one** AI provider:
+
+```sh
+# A) Codex CLI (if you are already signed in to it)
+python3 -m promo_finder run examples/synthetic_episode.txt --out results --provider codex
+
+# B) OpenAI API (use a model your account can access)
+export OPENAI_API_KEY='your-key'
+python3 -m promo_finder run examples/synthetic_episode.txt --out results --provider openai --model YOUR_MODEL
+```
+
+The run is finished when the terminal prints a line ending in `ranked_promos.csv`.
+
+**Step 4: Review your results**
+
+```sh
+python3 -m promo_finder serve --out results --port 8765
+```
+
+Open **http://127.0.0.1:8765**, then post or drop each suggested clip.
+
+> 💡 To use your own script, replace `examples/synthetic_episode.txt` with the path to your file or to a folder of scripts. Keep the `--out` folder private.
+
+---
+
+## What you get
+
+All results are saved in the `--out` folder:
+
+| File | What's inside |
+| --- | --- |
+| `ranked_promos.csv` | The clip list: start/end times, length, scores, reasons and rank. **Start here.** |
+| `data.json` | Data for the browser editor |
+| `run_log.json` | What was processed and whether each episode succeeded |
+| `rejections.json` | Clips that failed the checks, and why |
+| `raw/` | The AI's unedited answers, kept so every result can be checked |
+
+---
+
+## Writing a screenplay file
+
+Each file is plain text. It needs an episode number, then scenes, then timed blocks. Each block has a label in `**…:**`, a start and end time (`MM:SS.hh`), and its text:
 
 ```text
 EPISODE NUMBER: Episode 1
@@ -60,86 +120,64 @@ A red signal flashes over an empty platform.
 --- SCRIPT END ---
 ```
 
-`parse_episode(path)` preserves source order, overlapping blocks, original text,
-labels and timestamp strings. IDs such as `E001-0001` identify source blocks;
-numeric timing is always integer centiseconds. Unknown/malformed timed blocks
-cause a parse error, rather than silently disappearing. A block extending beyond
-its declared scene is preserved with a source warning.
-
-## Workflow and evidence
+To check a file before running the AI (no AI call):
 
 ```sh
-# Verify a complete assignment pack, if you have it privately.
-python3 -m promo_finder audit /path/to/pack --out /path/to/private-results --expect-pack
-
-# Development gate, then fresh episodes, then the entire pack.
-python3 -m promo_finder run /path/to/pack --out /path/to/private-results --provider codex --episodes 2,3,6
-python3 -m promo_finder run /path/to/pack --out /path/to/private-results --provider codex --episodes 23,41,45
-python3 -m promo_finder run /path/to/pack --out /path/to/private-results --provider codex --workers 3
-
-# Replay saved responses; no model call.
-python3 -m promo_finder render /path/to/pack --out /path/to/private-results
-
-# Print manual Episode 3 boundary evidence separately from model selection.
-python3 -m promo_finder benchmark /path/to/pack --out /path/to/private-results
+python3 -m promo_finder audit your_script.txt --out audit-check
 ```
 
-Each episode gets one independent request with zero to three candidates. The
-prompt contains timed events only: loglines, continuity notes, manual benchmarks,
-and future identity mappings are withheld. Character labels stay as observed in
-the scene. The model judges clarity from the selected cut's content.
+It reports how many episodes, scenes and entries it found, and it points to any formatting errors.
 
-`call_model()` in `model.py` is the provider boundary. The Codex adapter uses an
-isolated working directory, ephemeral read-only execution, and no tools. The
-OpenAI adapter uses structured outputs through the Responses API. The exact
-response is saved before candidate JSON is parsed. Raw traces/HTTP envelopes,
-prompts, source/prompt hashes, transport metadata, and errors are retained.
+---
 
-Existing responses are reused only with matching provenance. Failed attempts are
-not retried silently; `--retry-failed` creates a new immutable attempt. A valid
-empty `candidates` list is distinct from call, JSON, schema, and candidate failures.
+## All commands at a glance
 
-Outputs:
+| Command | What it does | Calls the AI? |
+| --- | --- | --- |
+| `audit` | Reads and checks screenplay files | No |
+| `run` | Finds promo clips | **Yes** |
+| `render` | Rebuilds results from saved AI answers | No |
+| `serve` | Opens the browser editor | No |
+| `benchmark` | Prints a manual timing reference for comparison | No |
 
-| Artifact | Purpose |
-| --- | --- |
-| `ranked_promos.csv` | Exact timecodes, duration, evidence IDs, explanations, scores, flags and rank |
-| `raw/episode_*/attempt_*/` | Unchanged response, prompt and provider evidence |
-| `run_log.json` | Every source episode, parser counts, status and provenance |
-| `rejections.json` | Specific invalid candidates and overlap suppression reasons |
-| `data.json` | Private editor data, including screenplay events |
+Useful `run` options: `--episodes 2,3,6` (only these episodes), `--workers 3` (process episodes in parallel) and `--retry-failed` (try failed episodes again).
 
-All four event IDs must exist in the same episode. Duration must be 20–60 seconds
-inclusive. The hook must start inside the first three seconds, and the entire
-cliffhanger event must fit. Either boundary strictly inside **any** overlapping
-dialogue is flagged for review, even if the selected boundary is a camera shot.
-The ranking is `0.40 × hook + 0.35 × cliffhanger + 0.25 × clarity`, on a 0–5 scale.
-Cuts sharing hook and cliffhanger IDs with at least 80% overlap of the shorter
-cut are deduplicated after scoring. Ties prefer higher clarity, then stable timing.
+---
 
-Timing checks cannot establish that a question remains unresolved or that a shot
-plays well. Review the transcript inside each cut, then confirm against footage.
-The editor supports post/adjust/drop with a reason, saved in this browser and
-exported as CSV. These decisions do not alter raw model outputs or scores.
+<details>
+<summary><b>How it works in detail</b> (for developers)</summary>
 
-## Tests
+### Parsing
+- Episode numbers come from the file content, never from filenames. Headings match case-insensitively.
+- Minutes can exceed 59; seconds must be 00–59. All timing is stored as whole centiseconds.
+- Block IDs look like `E001-0001`. Source order, overlapping blocks, labels and original text are kept as they are.
+- An unknown or malformed timed block causes an error instead of being skipped silently. A block that runs past its scene is kept, with a warning.
 
+### Model calls
+- Each episode gets one independent request that returns zero to three candidates.
+- The prompt contains timed events only. Loglines, continuity notes, benchmarks and future identity mappings are withheld.
+- `call_model()` in `model.py` is the provider boundary. The Codex adapter runs in an isolated, ephemeral, read-only directory with no tools. The OpenAI adapter uses structured outputs through the Responses API.
+- The exact response is saved before it is parsed. Saved responses are reused only when their provenance matches. Failed calls are never retried silently; `--retry-failed` creates a new attempt.
+
+### Validation and ranking
+- All four event IDs must exist in the same episode.
+- The duration must be 20–60 seconds inclusive, the hook must start within the first 3 seconds, and the whole cliffhanger event must fit inside the cut.
+- A boundary that falls inside overlapping dialogue is flagged for review.
+- The score is `0.40 × hook + 0.35 × cliffhanger + 0.25 × clarity` on a 0–5 scale.
+- Near-duplicate cuts are removed: these share hook and cliffhanger IDs and overlap at least 80%. Ties go to higher clarity, then the earlier timing.
+
+### Limits
+Timing checks cannot prove that a question stays unresolved or that a shot plays well. Always read the transcript and check the footage. Editor decisions are saved in the browser and exported as CSV. They never change the raw model outputs or scores.
+
+### Tests
 ```sh
 python3 -m unittest discover -s tests -v
-# Optional private integration; scripts are never copied into this project.
-SCREENPLAY_DIR=/path/to/pack python3 -m unittest discover -s tests -v
 ```
+The tests cover parsing, exact timing, overlapping events, unknown IDs, duration and hook limits, incomplete cliffhangers, interrupted dialogue, invalid scores and deduplication.
 
-Tests cover parser coverage, exact timing, overlapping events, unknown IDs,
-inclusive duration/hook limits, incomplete cliffhangers, interrupted dialogue,
-invalid scores and evidence-aware deduplication.
+### Privacy
+Keep scripts, results, prompts, footage and API keys outside this public repo. Serve private results only on `127.0.0.1`. The local server exposes only an explicit list of files and does not list directories.
 
-## Confidentiality and deployment
+References: [Codex non-interactive mode](https://developers.openai.com/codex/noninteractive) · [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
 
-Keep source scripts, results, prompts, traces, attached footage and credentials
-outside this public project. The public download contains only code, synthetic
-fixtures, and synthetic demonstration results. Serve private results on loopback;
-the local server exposes an explicit asset allowlist, without directory listings.
-
-Provider references: [Codex non-interactive mode](https://developers.openai.com/codex/noninteractive)
-and [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
+</details>
